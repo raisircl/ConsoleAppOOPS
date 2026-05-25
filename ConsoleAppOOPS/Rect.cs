@@ -30,7 +30,7 @@ namespace ConsoleAppOOPS
             length = r.length;
             breadth = r.breadth;
         }
-        public  int Lengeth
+        public  int Length
         {
             get { return length;  }
             set { length = value; }
@@ -44,7 +44,7 @@ namespace ConsoleAppOOPS
         {
                 return length * breadth;
         }
-        public int Perimeter()
+        public virtual int Perimeter()
         {
             return 2 * (length + breadth);
         }
