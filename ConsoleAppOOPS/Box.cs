@@ -11,7 +11,7 @@ new class is called derived class or child class or sub class.
  */
 namespace ConsoleAppOOPS
 {
-    internal class Box: Rect
+    internal class Box: Rect, IMsg
     {
         private int height;
         public int Height
@@ -41,6 +41,10 @@ namespace ConsoleAppOOPS
         public override int Perimeter()
         {
             return 4 * (Length + Breadth + Height);
+        }
+        public override void ShowMsg(string msg)
+        {
+            Console.WriteLine($"Message from Box class: {msg}");
         }
         // in oops refrence of parent class can hold the object of child class
         // but we cannot access the members of child class using parent class reference variable.

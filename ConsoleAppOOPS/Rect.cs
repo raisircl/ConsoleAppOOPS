@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ConsoleAppOOPS
 {
-    public class Rect
+    public class Rect: IShape, IMsg
     {
         //data members or properties of the class
         private int length; // instance variable - it is a variable which is declared inside the class but outside the method and it is not static
@@ -51,6 +51,11 @@ namespace ConsoleAppOOPS
         public override string ToString()
         {
             return $"{length}x{breadth}";
+        }
+
+        public virtual void ShowMsg(string msg)
+        {
+            Console.WriteLine($"Message from Rect class: {msg}");
         }
     }
 }
